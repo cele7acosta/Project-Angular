@@ -1,0 +1,174 @@
+/*Ejercicio 1: 
+Aplicar color de fondo del cuerpo (body).
+Aplicar color de texto del título <h1>.
+Aplicar colores a los párrafos.
+
+Ejercicio 2: Estilos de fuentes
+Cambiar la fuente del título <h1> a Arial.
+Cambiar el tamaño de la fuente del párrafo a 18px.
+
+Ejercicio 3: Bordes y márgenes
+Aplicar un borde sólido de 1px de color claro a un párrafo (<p>).
+Aumentar el margen superior del título <h1> a 20px.
+Agregar un padding de 10px alrededor del contenido del párrafo.
+
+Ejercicio 4: Estilos en botón
+Cambiar el color de fondo del botón a verde (#28a745) y el color del texto a blanco.
+Agregar bordes redondeados (border-radius) de 5px.
+Agregar padding 10px.
+Aplicar ancho del botón a 100px.
+Establecer margen superior e inferior de 10px.
+Quitar el color del borde del botón.
+
+Ejercicio 5: Inputs del formulario
+Agregar padding de 5px.
+Quitar bordes.
+Agregar márgenes superiores e inferiores de 5px entre cada control
+Plus: Aplicar un tipo de fuente para los labels de cada control.
+Plus: Aplicar width y height al textarea. Ejemplo: 300px ancho y 100px alto.
+
+Ejercicio 6: Footer
+Aplicar color de fondo.
+Cambiar color del texto del footer.
+Agregar padding de 20px.
+Alinear texto al centro.
+
+Ejercicio 7: Header
+Crear etiqueta header con un texto.
+Aplicar color de fondo y color de texto.
+Agregar padding de 50px.
+Alinear textos al centro.
+
+Ejercicio 8: Nav menu
+Aplicar color de fondo a la etiqueta nav y color de texto.
+Eliminar las bullets de la <ul> con: list-style: none;
+En cada item <li>, agregar padding 10px y aplicar display: inline-block; para mostrar los elementos en línea.
+Plus: Ocultar el submenu (ul dentro del li) con display: none;
+
+Ejercicio 9: Diseño responsive - Media queries
+Agregar media queries para que el color de fondo del body tenga un color diferente en distintas pantallas. 
+Ejemplos: @media screen and (min-width: 768px) {}
+@media screen and (min-width: 1280px) {}
+
+*/
+
+/*Ej 1-2-3 colores, fuentes, bordes y margenes*/
+body{
+    background-color: #f0f0f0; /*Color de fondo del cuerpo*/
+}
+
+h1{
+    color: #2c3e50; /*Color del texto del titulo*/
+    font-family: Arial, Helvetica, sans-serif; /*CAmbiar la fuente del titulo a Arial*/
+    margin-top: 20px; /*agregar margen superior*/
+}
+
+p{
+    color: #333333; /*Color de texto de los parrafos*/
+    font-size: 18px; /*Cambiar tamaño de fuente de los parrafos*/
+    border: 1px solid #ddd; /*Borde solido de 1px de color claro*/
+    padding: 10px; /*Agregar padding de 10px alrededor del contenido*/
+    margin-bottom: 10px; /*agregar margen inferior*/
+}
+
+/*Ej 4 : Estilos en el boton*/
+button{
+    background-color: #28a745;/*color de fondo verde*/
+    color: white; /*color del texto blanco*/
+    border-radius: 5px;/*bordes redondeados*/
+    padding: 10px;/*padding alrededor de 10px*/
+    width: 100px;/*ancho del boton*/
+    margin-top: 10px; /*margen superior*/
+    margin-bottom: 10px;/*margen inferior*/
+    border: none; /*quita el color de borde del boton*/
+}
+/* Hover y focus en el botón */
+button:hover {
+    background-color: #075333;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+/*Ej5 : inputs del formulario*/
+input textarea{
+    padding: 5px; /*agregar padding alrededor*/
+    border: none; /*quita los bordes*/
+    margin-top: 5px; /*margen superior*/
+    margin-bottom: 5px;/*margen inferior*/
+    text-align: right;
+
+}
+
+/*plus Ej5*/
+label{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*fuente para los labels*/
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+   
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+/*plus Ej5*/
+textarea{
+    width: 300px; /*ancho del textarea*/
+    height: 100px;/*alto del textarea*/
+}
+
+
+
+/*Ej7: Header*/
+header{
+    background-color: #6fabe7; /*color de fondo*/
+    color: white; /*color del texto*/
+    padding: 50px; /*padding alrededor de 50px*/
+    text-align: center; /*alinear texto al centro*/
+}
+
+/*Ej8 : Nav menu*/
+nav{
+    background-color: #3498db; /*color de fondo*/
+    color: white; /*color del texto*/
+}
+
+nav ul{
+    list-style: none; /*eliminar bullets de la lista*/
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    padding: 10px; /*agregar padding alrededor de 10px*/
+    display: inline-block; /*mostrar elementos en linea*/
+}
+
+/*plus Ej8*/
+nav li ul{
+    display: none; /*ocultar submenu*/
+}
+
+/*Ej 9 : Diseño responsive - media queries*/
+@media screen and (min-width: 768px){
+    body{
+        background-color: #e0e0e0; /*cambiar color de fondo para pantallas medianas*/
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body{
+        background-color: #d0d0d0; /*cambia el color de fondo para pantallas grandes*/
+    }
+}

@@ -1,27 +1,65 @@
-# ProjectAngular
+# Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
+# Ejercicio 1: Crear un Proyecto Angular
+Objetivo: Aprender a crear un proyecto y levantar el servidor de desarrollo.
 
-## Development server
+Instalar Angular CLI (si aún no lo instalamos).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Crear un proyecto con ng new nombre-app.
 
-## Code scaffolding
+Ejecutar el proyecto con ng serve.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Mostrar la aplicación en el navegador.
 
-## Build
+# Ejercicio 2: Crear y Mostrar un Componente
+Crear un componente con ng generate component nombre-componente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+En ts, agregar 2 variables strings que contengan mensajes y una variable booleana en false.
 
-## Running unit tests
+En el template, mostrar el valor de esa variable con interpolación.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+En el template, usando la directiva estructural ngIf, (importar NgIf en imports:[] del ts) ocultar uno de los mensajes usando la variable booleana.
 
-## Running end-to-end tests
+Incluir el componente creado en app.component.html, mediante su selector <app-nombre-componente></app-nombre-componente>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Plus: agregar estilos a los elementos del template usando el .css del componente.
 
-## Further help
+# Ejercicio 3: Crear y Mostrar un Componente
+Crear un componente con ng generate component nombre-componente.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Agregar un objeto con 4 propiedades en ts.
+
+En el template, mostrar los 4 valores de ese objeto usando interpolación.
+
+Incluir el componente creado en app.component.html, mediante su selector <app-nombre-componente></app-nombre-componente>
+
+Plus: agregar estilos a los elementos del template usando el .css del componente.
+
+# Ejercicio 4: Crear y Mostrar un Componente
+Crear un componente con ng generate component nombre-componente.
+
+Agregar un array con 4 objetos en ts.
+
+En el template, usando la directiva estructural ngFor, (importar NgFor en imports:[] del ts) recorrer el array para mostrar los 4 valores de cada objeto usando interpolación.
+
+Incluir el componente creado en app.component.html, mediante su selector <app-nombre-componente></app-nombre-componente>
+
+Plus: agregar estilos a los elementos del template usando el .css del componente.
+
+# Ejercicio 5: Crear y Mostrar un Componente (Header)
+Crear un componente header con ng generate component nombre-componente.
+
+Usar el html y estilos del header que hicimos en la clase de HTML.
+
+Incluir el componente creado en app.component.html, mediante su selector <app-nombre-componente></app-nombre-componente>
+
+Plus: Crear una variable para mostrar el texto del header desde ts y en el template usando interpolación.
+
+# Ejercicio 6: Crear y Mostrar un Componente (Footer)
+Crear un componente footer con ng generate component nombre-componente.
+
+Usar el html y estilos del footer que hicimos en la clase de HTML.
+
+Incluir el componente creado en app.component.html, mediante su selector <app-nombre-componente></app-nombre-componente>
+
+Plus: Crear una variable para mostrar el texto del footer desde ts y en el template usando interpolación.
