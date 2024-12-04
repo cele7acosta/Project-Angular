@@ -1,5 +1,4 @@
-# Angular
-
+# Angular - Trabajo Final
 # Ejercicio 1: Crear un Proyecto Angular
 Objetivo: Aprender a crear un proyecto y levantar el servidor de desarrollo.
 
@@ -64,26 +63,7 @@ Incluir el componente creado en app.component.html, mediante su selector <app-no
 
 Plus: Crear una variable para mostrar el texto del footer desde ts y en el template usando interpolación.
 
-# Ejercicio 7: Formulario de búsqueda de películas (Binding Bidireccional)
-Objetivo:
-Crear un componente SearchBar que permita buscar películas en tiempo real utilizando binding bidireccional ([(ngModel)]).
-
-Pasos:
-Configuración del componente SearchBar:
-Archivo TS (search-bar.component.ts):
-
-Declarar una variable searchTerm de tipo string y asignarle un valor inicial vacío.
-Importar y agregar el módulo FormsModule en los imports, para habilitar el uso de [(ngModel)].
-Archivo HTML (search-bar.component.html):
-
-Crear un elemento <input> con un atributo placeholder que indique "Buscar películas...".
-Implementar binding bidireccional con [(ngModel)] para enlazar el valor del input con la variable searchTerm.
-Agregar un <p> que diga: "Buscando...", interpolando el valor de searchTerm para mostrar en tiempo real lo que el usuario escribe.
-Incorporar el componente en la aplicación:
-En el archivo app.component.html, incluir el selector del componente SearchBar.
-Plus (opcional):
-Agregar estilos tanto para desktop como para mobile, asegurando que el campo de búsqueda sea responsivo y tenga diseño/colores diferentes.
-# Ejercicio 8: Lista de películas con comunicación padre-hijo
+# Ejercicio 7: Lista de películas con comunicación padre-hijo
 Objetivo:
 Crear dos componentes (MovieListComponent como padre y MovieItemComponent como hijo) que se comuniquen utilizando @Input y @Output.
 
@@ -91,7 +71,7 @@ Pasos:
 Configuración del componente padre MovieListComponent:
 Archivo TS (movie-list.component.ts):
 
-Declarar una lista de objetos movies, donde cada objeto tenga las propiedades title, year, y description.
+Declarar una lista de 10 objetos movies, donde cada objeto tenga las propiedades title, year, y description.
 Crear una variable selectedMovie para almacenar la película seleccionada.
 Crear un método onMovieSelected(movieTitle: string) que asigne el valor recibido a la variable selectedMovie.
 Archivo HTML (movie-list.component.html):
@@ -119,3 +99,57 @@ Incluir propiedades como title, year, description, y opcionalmente image.
 Usar esta interfaz para tipar la lista de películas y la propiedad @Input en el componente hijo.
 Estilizar las películas con un diseño de tarjetas (cards) y hacerlo responsivo para escritorio y móviles.
 Añadir imágenes a las películas para un diseño más atractivo.
+
+# Ejercicio 8: Formulario de búsqueda de películas (Binding Bidireccional)
+Objetivo:
+Crear un componente SearchBar que permita buscar películas en tiempo real utilizando binding bidireccional ([(ngModel)]).
+
+Pasos:
+Configuración del componente SearchBar:
+Archivo TS (search-bar.component.ts):
+
+Declarar una variable searchTerm de tipo string y asignarle un valor inicial vacío.
+Importar y agregar el módulo FormsModule en los imports, para habilitar el uso de [(ngModel)].
+Archivo HTML (search-bar.component.html):
+
+Crear un elemento <input> con un atributo placeholder que indique "Buscar películas...".
+Implementar binding bidireccional con [(ngModel)] para enlazar el valor del input con la variable searchTerm.
+Agregar un <p> que diga: "Buscando...", interpolando el valor de searchTerm para mostrar en tiempo real lo que el usuario escribe.
+Incorporar el componente en la aplicación:
+En el archivo app.component.html, incluir el selector del componente SearchBar.
+Plus (opcional):
+Agregar estilos tanto para desktop como para mobile, asegurando que el campo de búsqueda sea responsivo y tenga diseño/colores diferentes.
+
+# Ejercicio 9: Datos inyectados desde servicios
+Objetivo:
+Compartir datos a componentes mediante inyección de dependencias
+
+Pasos:
+Crear servicio a través de angular cli: ng g service, nombre a elección. En el servicio, crear un array de objetos con los datos del ejercicio 4. Inyectar el servicio en el componente de ejercicio 4 para reemplazar y obtener ese array desde el servicio en lugar de crearlo en el componente.
+
+# Ejercicio 10: Datos inyectados desde servicios para componentes de pelis
+Objetivo:
+Compartir datos a componentes mediante inyección de dependencias
+
+Pasos:
+Crear servicio a través de angular cli: ng g service, nombre a elección (ej. movie). En el servicio, crear un método que retorne el array de objetos de las pelis del componente (movie-list), generado en el ejercicio 7. Inyectar el servicio en el componente (movie-list) para obtener las pelis desde el servicio. Invocar el método del servicio que retorna las pelis y asignarlo a nuestra variable. Opcional: desde el constructor, ó, desde el método de inicialización (ngOnInit): https://angular.dev/api/core/OnInit?tab=api Ejemplo:
+
+   ngOnInit(): void {
+     //this.movies = this.movieService.getMovies(); 
+  }
+
+# Ejercicio 11: Ruteo y Navegación
+Objetivo:
+Armar ruteo para 2 páginas y re-estructuración de app para envolver nuestros componentes.
+
+Pasos:
+Antes de empezar, necesitamos limpiar nuestro app.component.html, de manera que únicamente nos quede header, footer y router-outlet:
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+Crear 2 componentes que vamos a usar para "envolver" a otros componentes: Crear componente llamado Ejercicios, para contener los componentes que hicimos de ejercicios, para esto, implementamos los selectores de cada componente de ejercicio y los importamos. Crear componente llamado Movies, para contener los componentes de movie list y searchbar.
+
+En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
+
+Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests

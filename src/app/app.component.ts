@@ -7,12 +7,13 @@ import { FooterComponent } from "./footer/footer.component";
 
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Componente1Component, Componente2Component, Componente3Component, HeaderComponent, FooterComponent, SearchBarComponent, MovieListComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

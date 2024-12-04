@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Movie } from '../movie-list/movie-list.component';
+import { Movie } from '../models/interfaces';
 import { NgIf } from '@angular/common';
 
 
