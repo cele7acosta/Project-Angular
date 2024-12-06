@@ -24,22 +24,23 @@
 
 /* Estilos responsivos para dispositivos móviles */
 @media (max-width: 600px) {
-    .search-bar {
+    .search-container {
     padding: 10px;
     }
 
-    .search-bar input {
+    .search-container input {
     max-width: 100%;
     font-size: 14px;
+    background-color: rgb(185, 105, 132);
     }
 
-    .search-bar p {
+    .search-container p {
     font-size: 12px;
     }
 }
 
   /* Estilos para cuando el campo de búsqueda está vacío */
-.search-bar input::placeholder {
+.search-container input::placeholder {
     color: #bbb;
     font-style: italic;
   }
