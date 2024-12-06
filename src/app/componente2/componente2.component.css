@@ -1,4 +1,7 @@
 p {
+    font-size: 16px;
+    color: #333;
     margin: 5px 0;
-    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
 }
