@@ -1,9 +1,10 @@
 ul{
     list-style-type: none;
-    padding: 0;
+    padding: 8px;
 }
 
 li {
     margin: 5px 0;
     font-size: 14px;
+    padding: 5px;
 }

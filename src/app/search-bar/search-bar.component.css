@@ -1,3 +1,4 @@
+/* Estilos para el contenedor del input y el texto */
 .search-container {
     display: flex;
     flex-direction: column;
@@ -5,7 +6,8 @@
     padding: 10px;
 }
 
-input {
+/* Estilos para el input */
+.search-container input {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -14,7 +16,30 @@ input {
     border-radius: 4px;
 }
 
-p{
+/* Estilo para el texto de búsqueda en tiempo real */
+.search-container p{
     margin-top: 10px;
     color: gray;
 }
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 600px) {
+    .search-bar {
+    padding: 10px;
+    }
+
+    .search-bar input {
+    max-width: 100%;
+    font-size: 14px;
+    }
+
+    .search-bar p {
+    font-size: 12px;
+    }
+}
+
+  /* Estilos para cuando el campo de búsqueda está vacío */
+.search-bar input::placeholder {
+    color: #bbb;
+    font-style: italic;
+  }
