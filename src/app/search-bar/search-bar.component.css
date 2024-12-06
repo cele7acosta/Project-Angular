@@ -31,16 +31,18 @@
     .search-container input {
     max-width: 100%;
     font-size: 14px;
-    background-color: rgb(185, 105, 132);
+    background-color: #6fabe7;
     }
 
     .search-container p {
     font-size: 12px;
     }
+
+     /* Estilos para cuando el campo de búsqueda está vacío */
+    .search-container input::placeholder {
+        color: #ddd;
+        font-style: italic;
+    }
+
 }
 
-  /* Estilos para cuando el campo de búsqueda está vacío */
-.search-container input::placeholder {
-    color: #bbb;
-    font-style: italic;
-  }
