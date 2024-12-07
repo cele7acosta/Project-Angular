@@ -4,6 +4,7 @@ import { MoviesComponent } from './movies/movies.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'ejercicios', pathMatch: 'full' }, // Ruta inicial redirige a 'ejercicios'
+    // {path: '**', redirectTo: 'ejercicios' }, // Manejo de rutas no encontradas
     {path: 'ejercicios', component: EjerciciosComponent},
     {path: 'pelis', component: MoviesComponent}
     
