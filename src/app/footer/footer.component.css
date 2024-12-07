@@ -1,7 +1,7 @@
 /*Ej6 : Footer*/
 footer{
     background-color: #6fabe7; /*color de fondo*/
-    color: white; /*color del texto*/
+    color: #f9f9f9; /*color del texto*/
     padding: 20px; /*agreagar padding alrededor de 20px*/
     text-align: center; /*alinear texto al centro*/
 }
