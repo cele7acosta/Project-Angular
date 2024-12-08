@@ -1,17 +1,40 @@
 .movie-card {
-    border: 1px;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    align-content: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Elementos apilados verticalmente */
+    align-items: center; /* Centrar los elementos en la tarjeta */
+    width: 200px; /* Ancho fijo de las tarjetas */
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Evitar desbordes */
 }
 
+p{
+    font-size: 18px;
+}
 
-
+/* Imagen de la tarjeta */
 .movie-card img {
-    max-width: 220px; /* La imagen se adapta al ancho del contenedor */
+    width: 100%; /* Imagen cubre el ancho de la tarjeta */
+    height: auto;
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+}
+
+/* Títulos */
+.movie-card h3 {
+    margin: 12px 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Descripción */
+.movie-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 8px;
+    text-align: center;
 }
 
 button {

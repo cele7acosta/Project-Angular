@@ -3,7 +3,10 @@
 header{
     background-color: #6fabe7; /*color de fondo*/
     padding: 50px; /*padding alrededor de 50px*/
-    color: #f9f9f9; /*color de texto*/
     text-align: center; /*alinear texto al centro*/
+}
+
+h1 {
+    color: #f9f9f9; /*color de texto*/
 }
 
