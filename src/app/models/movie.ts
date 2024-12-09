@@ -5,8 +5,3 @@ export interface Movie {
     image?: string; 
 }
 
-export interface array {
-    id: number
-    nombre: string
-    edad: number
-}

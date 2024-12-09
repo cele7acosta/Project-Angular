@@ -1,5 +1,18 @@
-<ul>
-    <li *ngFor="let item of arrayObjetos">
-        ID: {{item.id}}, Nombre: {{item.nombre}}, Edad: {{item.edad}}
-    </li>
-</ul>
+<div class="table-container">
+    <table class="items-table">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arrayObjetos">
+        <td>{{ item.id }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.edad }}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { DataService } from '../data.service';
-import { array } from '../models/interfaces';
+import { array } from '../models/array';
 
 @Component({
   selector: 'app-componente3',

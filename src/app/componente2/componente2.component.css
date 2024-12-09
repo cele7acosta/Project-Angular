@@ -1,9 +1,66 @@
-p {
-    font-size: 19px;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0px 0;
-    padding: 3px;
-    text-align: center;
+/* Contenedor de la tabla */
+.profile-table-container {
+  background-color: #f9f9f9; /* Fondo suave */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px;
+  max-width: 50%; /* Aseguramos que el contenedor ocupe 50% espacio disponible */
+  margin: 20px auto; /* Centrado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  font-family: Arial, sans-serif; /* Fuente */
+  box-sizing: border-box; /* Para evitar desbordes por padding */
+}
 
- }
+/* Estilo para la tabla */
+.profile-table {
+  width: 100%;
+  border-collapse: collapse; /* Eliminar espacio entre celdas */
+}
+
+.profile-table td {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd; /* Línea divisoria sutil */
+}
+
+/* Resaltar las etiquetas en la tabla */
+.profile-table td strong {
+  color: #007bff; /* Color azul */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilos Responsivos */
+
+/* Para pantallas de hasta 768px (tabletas y pantallas medianas) */
+@media (max-width: 768px) {
+  /* Aseguramos que la tabla ocupe el 100% del ancho disponible */
+  .profile-table-container {
+      width: 40%; /* Reducir el ancho */
+  }
+
+  .profile-table td {
+      font-size: 14px; /* Reducir tamaño de texto */
+  }
+
+  /* Mejorar la legibilidad al agregar un poco más de espaciado entre filas */
+  .profile-table td {
+      padding: 8px;
+  }
+}
+
+/* Para pantallas de hasta 480px (dispositivos móviles pequeños) */
+@media (max-width: 480px) {
+  .profile-table-container {
+      width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
+      padding: 15px; /* Reducir el padding */
+  }
+
+  .profile-table td {
+      font-size: 12px; /* Reducir más el tamaño de texto */
+      padding: 6px; /* Reducir el padding */
+  }
+
+  /* Resaltar mejor las etiquetas en pantallas pequeñas */
+  .profile-table td strong {
+      font-size: 14px; /* Aumentar ligeramente el tamaño de las etiquetas */
+  }
+}

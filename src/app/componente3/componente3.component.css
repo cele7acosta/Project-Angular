@@ -1,14 +1,89 @@
-ul{
-    list-style-type: none;
-    padding: 6px; 
-    background-color: #f9f9f9
-    
+/* Contenedor de la tabla */
+.table-container {
+  padding: 20px;
+  max-width: 60%;
+  margin: 0 auto; /* Centrado */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-sizing: border-box;
+  overflow-x: auto; /* Desplazamiento horizontal si es necesario */
 }
 
-li {
-   
-    font-size: 19px;
-    color: #333;
-    padding: 5px;
-    text-align: center;
+/* Estilo para la tabla */
+.items-table {
+  width: 100%;
+  border-collapse: collapse; /* Eliminar espacio entre celdas */
+  table-layout: fixed; /* Fijar el ancho de las columnas */
+  margin: 20px 0;
+}
+
+/* Estilo para las celdas */
+.items-table th, .items-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* Permitir que el texto largo se rompa */
+  white-space: normal; /* Ajuste de texto dentro de las celdas */
+  min-width: 100px; /* Ancho mínimo para las celdas */
+}
+
+/* Encabezado de la tabla */
+.items-table th {
+  background-color: #007bff; /* Fondo azul para el encabezado */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1.1rem;
+}
+
+/* Estilo para las filas de la tabla */
+.items-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fondo alterno en las filas */
+}
+
+/* Estilo para las celdas */
+.items-table td {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilos Responsivos */
+
+/* Para pantallas medianas y pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .table-container {
+      max-width: 100%;
+      padding: 10px;
+  }
+
+  .items-table th, .items-table td {
+      padding: 8px;
+  }
+
+  .items-table td {
+      font-size: 14px;
+  }
+}
+
+/* Para pantallas móviles (hasta 480px) */
+@media (max-width: 480px) {
+  .items-table {
+      display: block;
+      width: 100%;
+      overflow-x: auto; /* Habilitar desplazamiento horizontal */
+  }
+
+  .items-table th, .items-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center; /* Centrar texto en pantallas móviles */
+  }
+
+  .items-table th {
+      font-size: 1rem;
+  }
+
+  .items-table tr {
+      margin-bottom: 10px; /* Espaciado entre filas */
+  }
 }

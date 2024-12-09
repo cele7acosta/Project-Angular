@@ -1,4 +1,54 @@
-nav{
-    text-align: left;
-    font-size: 20px;
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style-type: none; /* Eliminar puntos de lista */
+    padding: 0; /* Eliminar relleno por defecto */
+    display: flex; /* Mostrar los enlaces en fila */
+    justify-content: center; /* Centrar los elementos */
+    background-color: #f9f9f9; /* Fondo blanco */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Eliminar subrayado por defecto */
+    color: #007bff;; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    font-weight: bold; /* Resalta los enlaces */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav ul li a:hover {
+    background-color: #6fabe7; /* Fondo al pasar el ratón */
+    color: white; /* Cambiar color del texto */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cambiar la dirección de la lista de navegación a columna para pantallas pequeñas */
+    nav ul {
+        flex-direction: column; /* Columna en lugar de fila */
+        align-items: center; /* Centrar los enlaces */
+        padding: 10px; /* Añadir algo de relleno */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajustar margen en la lista */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Reducir el tamaño de fuente */
+        padding: 8px 15px; /* Reducir el espaciado interno */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para pantallas muy pequeñas, ajustar aún más */
+    nav ul li a {
+        font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+        padding: 6px 12px; /* Reducir el espaciado interno */
+    }
 }

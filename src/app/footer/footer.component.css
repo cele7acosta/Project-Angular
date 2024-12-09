@@ -1,13 +1,40 @@
-/*Ej6 : Footer*/
-footer{
-    background-color: #6fabe7; /*color de fondo*/
-    padding: 20px;
-    
+/* Estilos del footer */
+footer {
+    background-color: #6fabe7; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding y borde dentro del ancho */
+    bottom: 0; /* Ubicación en la parte inferior */
+    left: 0; /* Alinea a la izquierda */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
-p{
-    color: #f9f9f9; /*color del texto*/
-    padding: 10px; /*agreagar padding alrededor de 20px*/
-    text-align: center; /*alinear texto al centro*/
-    font-size: 18px;
+/* Estilos del texto */
+footer p {
+    color: #f9f9f9; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    margin: 0; /* Elimina el margen externo */
+    text-align: center; /* Alineación centrada */
+    font-size: 16px; /* Tamaño de fuente estándar */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; /* Reduce el padding en pantallas medianas */
+    }
+
+    footer p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px; /* Menor espaciado en dispositivos pequeños */
+    }
+
+    footer p {
+        font-size: 12px; /* Tamaño más pequeño para texto */
+    }
 }

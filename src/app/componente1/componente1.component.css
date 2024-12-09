@@ -1,9 +1,48 @@
-p {
-    font-size: 19px;
-    color: #333;
-    background-color: #f9f9f9;
-    /* padding: 10px; */
-    border-radius: 5px;
-    border: 2px solid #ddd;
+/* Estilo para el contenedor de los mensajes */
+.message-container {
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Centrar el contenedor en la página */
+    width: 90%; /* Ancho relativo al contenedor principal */
+    max-width: 600px; /* Ancho máximo para evitar que se estire demasiado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para los mensajes */
+.message {
+    font-size: 19px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
     text-align: center;
+    margin-bottom: 15px; /* Espaciado entre los párrafos */
+    line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
+}
+
+/* Estilos responsivos */
+
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .message-container {
+        width: 95%; /* Mayor uso del espacio en pantallas más pequeñas */
+        padding: 15px; /* Menos padding para que se vea mejor en pantallas pequeñas */
+    }
+
+    .message {
+        font-size: 16px; /* Reducir el tamaño del texto */
+        margin-bottom: 12px; /* Espaciado ligeramente menor */
+    }
+}
+
+/* Para pantallas de hasta 480px (dispositivos móviles más pequeños) */
+@media (max-width: 480px) {
+    .message-container {
+        width: 100%; /* Usar todo el ancho disponible */
+        padding: 10px; /* Reducir aún más el padding */
+    }
+
+    .message {
+        font-size: 14px; /* Reducir el tamaño del texto aún más */
+        margin-bottom: 10px; /* Menor margen entre los mensajes */
+    }
 }

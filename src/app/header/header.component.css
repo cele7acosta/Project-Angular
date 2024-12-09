@@ -1,12 +1,41 @@
 
-/*Ej7: Header*/
-header{
-    background-color: #6fabe7; /*color de fondo*/
-    padding: 50px; /*padding alrededor de 50px*/
-    text-align: center; /*alinear texto al centro*/
+header {
+    display: flex;
+    flex-direction: column; /* Ajustar contenido verticalmente para pantallas pequeñas */
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar elementos verticalmente */
+    background-color: #6fabe7; /* Color de fondo */
+    padding: 50px; /* Padding reducido para pantallas más pequeñas */
+    text-align: center; /* Centrar texto */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añadir un poco de profundidad */
+    box-sizing: border-box; /* Asegurar que padding no desborde */
 }
 
 h1 {
-    color: #f9f9f9; /*color de texto*/
+    color: #f9f9f9; /* Color del texto */
+    font-size: 2rem; /* Tamaño de texto adaptativo */
+    margin: 0; /* Eliminar margen adicional */
+    word-wrap: break-word; /* Asegurar que el texto no desborde */
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; /* Reducir el padding en pantallas medianas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reducir el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Más compacto en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Tamaño del texto para pantallas muy pequeñas */
+    }
+}
