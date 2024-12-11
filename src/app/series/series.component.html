@@ -1,0 +1,43 @@
+<div class="episodes-container">
+    <!-- Campo para editar el nombre de la serie -->
+    <label for="seriesTitleInput">Editar Nombre de la Serie:</label>
+    <input
+        id="seriesTitleInput"
+        type="text"
+        class="series-title-input"
+        [(ngModel)]="seriesTitle"
+        (change)="onSeriesTitleChange()"
+        placeholder="Escribe el nombre de la serie"
+    />
+
+    <!-- Mostrar el nombre de la serie y la temporada -->
+    <h2>Lista de episodios de la serie: {{ seriesTitle }}</h2>
+
+    <!-- Mostrar mensaje de error si existe -->
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <!-- Selector de temporada con data binding -->
+    <label for="seasonSelect">Selecciona la Temporada:</label>
+    <select
+        id="seasonSelect"
+        [(ngModel)]="season"
+        (change)="onSeasonChange()"
+        [disabled]="!!errorMessage"
+    >
+        <option *ngFor="let seasonNumber of [].constructor(totalSeasons); let i = index" [value]="i + 1">
+            Temporada {{ i + 1 }}
+        </option>
+    </select>
+
+    <!-- Lista de episodios -->
+    <ul *ngIf="episodes.length > 0 && !errorMessage; else noEpisodes">
+        <li *ngFor="let episode of episodes">
+            <strong>{{ episode.Title }}</strong> - Emitido el: {{ episode.Released }} - Calificación: {{ episode.imdbRating }}
+        </li>
+    </ul>
+
+    <!-- Mensaje en caso de no tener episodios -->
+    <ng-template #noEpisodes>
+        <p>No hay episodios disponibles para la temporada seleccionada.</p>
+    </ng-template>
+</div>

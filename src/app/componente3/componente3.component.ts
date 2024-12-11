@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { DataService } from '../data.service';
+import { DataService } from '../services/data.service';
 import { array } from '../models/array';
 
 @Component({
